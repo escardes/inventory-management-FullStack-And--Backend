@@ -14,6 +14,7 @@ import { Archive,
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import Image from "next/image";
 
 
 interface SidebarLinkProps{
@@ -79,7 +80,13 @@ const Sidebar = () => {
         {/* TOP LOGO */}
         <div>
             <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed?"px-5":"px-8"}`}>
-                 <div>logo</div>
+                        <Image 
+                         src="https://s3-imventorymanagement.s3.eu-north-1.amazonaws.com/Black+White+Modern+Handwritten+Square+Studio+Logo.png"
+                          alt="EurekaT&F"
+                          width={27}
+                          height={27}
+                          className="rounded w-8"
+                        />
                 <h1 className={`${isSidebarCollapsed?"hidden":"block"} font-extrabold text-2xl`}>
                     EurekaT&F
                 </h1>
